@@ -1,0 +1,18 @@
+.dd-shortcode-image .card img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+.dd-ve-container .modal button.close {
+    right: 0;
+    outline: 0;
+    background: none;
+    border: none;
+}
+.dd-ve-container .modal-content {
+    border: 0 !important;
+}
+.dd-ve-container .modal-body img {
+    width: 100%;
+}

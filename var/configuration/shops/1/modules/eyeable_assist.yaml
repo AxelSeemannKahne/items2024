@@ -1,0 +1,30 @@
+id: eyeable_assist
+moduleSource: vendor/eyeable/eye-able-oxid
+version: 3.0.1
+activated: false
+title:
+  en: 'Eye-Able® Assist'
+description:
+  en: 'Discover the Eye-Able® Assist Module: Your solution for an accessible website or eShop. With Eye-Able® Assist, you give your customers the freedom to tailor your online offerings to their exact needs. Make access easier and open your digital door to a wider audience. Because every customer matters. Contact us for a full licence and adaptation of the software to your website.  You will also receive a short report on accessibility errors according to WCAG 2.2 - you can view this on the start page in the admin area.'
+  de: 'Entdecken Sie das Eye-Able® Assist Modul: Ihre Lösung für eine barrierefreie Website oder eShop. Mit Eye-Able® Assist geben Sie Ihren Kunden die Freiheit, Ihr Online-Angebot genau auf ihre Bedürfnisse abzustimmen. Erleichtern Sie den Zugang und öffnen Sie Ihre digitale Tür für ein breiteres Publikum. Denn jeder Kunde zählt. Kontaktieren Sie uns für eine Vollizenz und die Anpassung der Software an Ihre Webseite. Außerdem erhalten Sie einen Kurzreport zu Barrierefreiheitsfehler nach WCAG 2.2 - diesen können Sie auf der Startseite im Admin Bereich einsehen.'
+lang: ''
+thumbnail: pictures/logo.png
+author: 'Webinclusion GmbH, OXID eSales AG'
+url: 'https://eye-able.com/'
+email: info@eye-able.com
+classExtensions:
+  OxidEsales\Eshop\Core\ViewConfig: EyeAble\EyeAbleAssist\Shop\ViewConfig
+controllers:
+  eyeabletrigger: EyeAble\EyeAbleAssist\Shop\Controller\ReportController
+events:
+  onActivate: '\EyeAble\EyeAbleAssist\Core\ModuleEvents::onActivate'
+  onDeactivate: '\EyeAble\EyeAbleAssist\Core\ModuleEvents::onDeactivate'
+moduleSettings:
+  eyeableassist_apiurl:
+    group: eyeableassist_main
+    type: str
+    value: 'https://audit-api.eye-able.com/auditStats'
+  eyeableassist_apikey:
+    group: eyeableassist_main
+    type: str
+    value: VZNJG65cb2fce4q5

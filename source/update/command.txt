@@ -1,0 +1,9 @@
+cp -vnr /home/itenqoda/www.items-africa.com_rec/out/pictures/ /home/itenqoda/www.items-africa.com_oxid_7_1/ia/source/out/pictures/master
+
+
+
+
+
+cp -vnr /home/itenqoda/www.items-africa.com_oxid_7_1/ia/source/out/pictures/master/product/0 /home/itenqoda/www.items-africa.com_oxid_7_1/ia/source/out/pictures/master/category/thumb
+
+cp -vnr /home/itenqoda/www.items-africa.com_oxid_7_1/ia/source/out/pictures/master/product/icon/ /home/itenqoda/www.items-africa.com_oxid_7_1/ia/source/out/pictures/master/category/icon/

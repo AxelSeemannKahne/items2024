@@ -1,0 +1,120 @@
+id: ddoevisualcms
+moduleSource: vendor/ddoe/visualcms-module
+version: 5.0.1
+activated: true
+title:
+  en: 'Visual CMS'
+description:
+  de: "<span>Einfache Verwaltung von CMS-Inhalten per Drag & Drop.</span>\n             <br>\n             <ul>\n                <li>Viele M&ouml;glichkeiten durch Verwendung von Widgets</li>\n                <li>Kinderleicht per Drag & Drop bedienbar</li>\n                <li>Schnelleres Arbeiten = gro&szlig;e Zeitersparnis</li>\n                <li>Apex theme Ready</li>\n                <li>CMS-Seiten Livesuche</li>\n                <li>Responsive Gridsystem</li>\n             </ul>\n             <dl class=\"moduleDesc clear\">\n                <dt>Doku</dt>\n                <dd><a href=\"https://docs.oxid-esales.com/modules/vcms/de/latest/\" \n                    target=\"_blank\">Benutzerhandbuch Modul Visual CMS</a></dd>\n             </dl>"
+  en: "<span>Easy management of CMS content via drag and drop.</span>\n             <br>\n             <ul>\n                <li>Many scenarios possible through usage of widgets</li>\n                <li>Drag & Drop</li>\n                <li>Fast Results</li>\n                <li>Apex theme Ready</li>\n                <li>Live search of CMS pages</li>\n                <li>Responsive grid system</li>\n             </ul>\n             <dl class=\"moduleDesc clear\">\n                <dt>DOK</dt>\n                <dd><a href=\"https://docs.oxid-esales.com/modules/vcms/en/latest/\" \n                    target=\"_blank\">Visual CMS Module User Manual</a></dd>\n             </dl>"
+lang: ''
+thumbnail: logo.png
+author: 'OXID eSales AG & digidesk - media solutions'
+url: 'http://www.oxid-esales.com'
+email: info@oxid-esales.com
+classExtensions:
+  OxidEsales\Eshop\Core\ViewConfig: OxidEsales\VisualCmsModule\Core\ViewConfig
+  OxidEsales\Eshop\Core\Theme: OxidEsales\VisualCmsModule\Core\Theme
+  OxidEsales\Eshop\Application\Controller\ContentController: OxidEsales\VisualCmsModule\Controller\ContentController
+  OxidEsales\Eshop\Application\Component\BasketComponent: OxidEsales\VisualCmsModule\Component\BasketComponent
+  OxidEsales\Eshop\Application\Model\Content: OxidEsales\VisualCmsModule\Model\Content
+  OxidEsales\Eshop\Application\Model\ContentList: OxidEsales\VisualCmsModule\Model\ContentList
+  OxidEsales\Eshop\Application\Model\SeoEncoderContent: OxidEsales\VisualCmsModule\Model\SeoEncoderContent
+controllers:
+  ddoevisualcmsadmin: OxidEsales\VisualCmsModule\Controller\Admin\VisualCmsAdmin
+events:
+  onActivate: '\OxidEsales\VisualCmsModule\Core\Events::onActivate'
+  onDeactivate: '\OxidEsales\VisualCmsModule\Core\Events::onDeactivate'
+moduleSettings:
+  blCustomGridFramework:
+    group: frontend
+    type: bool
+    value: false
+  sGridColPrefix:
+    group: frontend
+    type: str
+    value: col-sm-
+  sGridOffsetPrefix:
+    group: frontend
+    type: str
+    value: col-sm-offset-
+  sGridRow:
+    group: frontend
+    type: str
+    value: row
+  blGridWordNumbers:
+    group: frontend
+    type: bool
+    value: false
+  iGridSize:
+    group: frontend
+    type: num
+    value: 12
+  blEnableLazyLoading:
+    group: frontend
+    type: bool
+    value: false
+  blEnableFontAwesome:
+    group: frontend
+    type: bool
+    value: false
+  iGridsterSize:
+    group: backend
+    type: num
+    value: 6
+  aPredefinedCssClasses:
+    group: backend
+    type: arr
+    value: {  }
+  iDefaultWidgetSize:
+    group: backend
+    type: num
+    value: 1
+  blEnableVisualEditorBlocks:
+    group: backend
+    type: bool
+    value: false
+  blDisableJQuery:
+    group: other
+    type: bool
+    value: true
+  blDisableBootstrap:
+    group: other
+    type: bool
+    value: true
+  blVisualEditorDebug:
+    group: other
+    type: bool
+    value: false
+  ddoeVisualCmsAlternativeImageDirectory:
+    group: other
+    type: str
+    value: ''
+  ddoeSmallThumbSize:
+    group: thumbnails
+    type: str
+    value: '185*185'
+  ddoeMediumThumbSize:
+    group: thumbnails
+    type: str
+    value: '300*300'
+  ddoeBigThumbSize:
+    group: thumbnails
+    type: str
+    value: '800*800'
+  ddoeSmallThumbCssClass:
+    group: thumbnails
+    type: str
+    value: block-small-thumbnail-class
+  ddoeMediumThumbCssClass:
+    group: thumbnails
+    type: str
+    value: block-medium-thumbnail-class
+  ddoeBigThumbCssClass:
+    group: thumbnails
+    type: str
+    value: block-big-thumbnail-class
+  ddoeDefaultThumbCssClass:
+    group: thumbnails
+    type: str
+    value: block-default-thumbnail-class

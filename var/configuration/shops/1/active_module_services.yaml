@@ -1,0 +1,9 @@
+imports:
+  -
+    resource: ../../../../vendor/oxid-esales/gdpr-optin-module/services.yaml
+  -
+    resource: ../../../../vendor/oxid-esales/media-library-module/services.yaml
+  -
+    resource: ../../../../vendor/ddoe/wysiwyg-editor-module/services.yaml
+  -
+    resource: ../../../../vendor/ddoe/visualcms-module/services.yaml

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MessDetectorOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PHPCSFixerOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PHPCodeSnifferOptionsConfiguration">
+    <option name="highlightLevel" value="WARNING" />
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/items-africa/vendor/composer" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/oxid-esales/oxideshop-composer-plugin" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/oxid-esales/oxideshop-ce" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/oxid-esales/media-library-module" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/oxid-esales/gdpr-optin-module" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/oxid-esales/oxideshop-demodata-pe" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/oxid-esales/oxideshop-demodata-installer" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/oxid-esales/oxideshop-demodata-ce" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/oxid-esales/oxideshop-db-views-generator" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/oxid-esales/oxideshop-metapackage-pe" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/oxid-esales/oxideshop-metapackage-ce" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/oxid-esales/oxideshop-facts" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/oxid-esales/oxideshop-doctrine-migration-wrapper" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/oxid-esales/twig-component" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/oxid-esales/twig-admin-theme" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/oxid-esales/oxideshop-unified-namespace-generator" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/oxid-esales/oxideshop-pe" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/intervention/gif" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/friendsofphp/proxy-manager-lts" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/oxid-esales/twig-component-pe" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/oxid-professional-services/usercentrics" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/justinrainbow/json-schema" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/ddoe/wysiwyg-editor-module" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/ddoe/visualcms-module" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/seld/signal-handler" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/seld/phar-utils" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/seld/jsonlint" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/kore/data-object" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/laminas/laminas-code" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/eyeable/eye-able-oxid" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/react/promise" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/makaira/shared-libs" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/makaira/oxid-connect-essential" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/symfony/expression-language" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/symfony/lock" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/symfony/polyfill-php83" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/symfony/templating" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/oxid-esales/apex-theme" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/wikimedia/less.php" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/webmozart/glob" />
+      <path value="$PROJECT_DIR$/items-africa/vendor/phpmailer/phpmailer" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.2">
+    <option name="suggestChangeDefaultLanguageLevel" value="false" />
+  </component>
+  <component name="PhpStanOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PsalmOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+</project>

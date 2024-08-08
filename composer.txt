@@ -1,0 +1,16 @@
+ "repositories": [
+        {
+            "type": "composer",
+            "url": "https://professional-edition.packages.oxid-esales.com/"
+        },
+        {
+            "type": "path",
+            "url": "./extensions/ask/askwidget"
+        }
+    ],
+    "require": {
+        "oxid-esales/oxideshop-metapackage-pe": "v7.1.0",
+        "ask/askwidget": "*"
+    },
+
+/usr/local/php8.2/bin/php ~/bin/composer.phar update

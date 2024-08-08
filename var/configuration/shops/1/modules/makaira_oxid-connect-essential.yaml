@@ -1,0 +1,95 @@
+id: makaira_oxid-connect-essential
+moduleSource: vendor/makaira/oxid-connect-essential
+version: 2.1.2
+activated: false
+title:
+  en: 'Makaira Connect Essential'
+description:
+  en: 'This module provides required endpoints to import product data into Makaira.'
+lang: ''
+thumbnail: admin/makaira.jpg
+author: 'Makaira GmbH'
+url: 'https://www.makaira.io/'
+email: support@makaira.io
+classExtensions:
+  OxidEsales\Eshop\Core\Output: Makaira\OxidConnectEssential\Oxid\Core\MakairaConnectOutput
+  OxidEsales\Eshop\Application\Controller\Admin\ArticleAttributeAjax: Makaira\OxidConnectEssential\Controller\Admin\ArticleAttributeAjax
+  OxidEsales\Eshop\Application\Controller\Admin\ArticleCrosssellingAjax: Makaira\OxidConnectEssential\Controller\Admin\ArticleCrossSellingAjax
+  OxidEsales\Eshop\Application\Controller\Admin\ArticleExtendAjax: Makaira\OxidConnectEssential\Controller\Admin\ArticleExtendAjax
+  OxidEsales\Eshop\Application\Controller\Admin\ArticleSelectionAjax: Makaira\OxidConnectEssential\Controller\Admin\ArticleSelectionAjax
+  OxidEsales\Eshop\Application\Controller\Admin\AttributeMainAjax: Makaira\OxidConnectEssential\Controller\Admin\AttributeMainAjax
+  OxidEsales\Eshop\Application\Controller\Admin\CategoryOrderAjax: Makaira\OxidConnectEssential\Controller\Admin\CategoryOrderAjax
+  OxidEsales\Eshop\Application\Controller\Admin\ManufacturerMainAjax: Makaira\OxidConnectEssential\Controller\Admin\ManufacturerMainAjax
+  OxidEsales\Eshop\Application\Controller\Admin\SelectListMainAjax: Makaira\OxidConnectEssential\Controller\Admin\SelectListMainAjax
+controllers:
+  MakairaReviewController: Makaira\OxidConnectEssential\Controller\ReviewController
+  MakairaUserController: Makaira\OxidConnectEssential\Controller\UserController
+  MakairaCartController: Makaira\OxidConnectEssential\Controller\CartController
+  makaira_connect_endpoint: Makaira\OxidConnectEssential\Controller\Endpoint
+events:
+  onActivate: 'Makaira\OxidConnectEssential\Core\ModuleEvents::onActivate'
+moduleSettings:
+  makaira_connect_secret:
+    group: SETTINGS
+    type: str
+    value: ''
+  makaira_connect_category_inheritance:
+    group: SETTINGS
+    type: bool
+    value: false
+  makaira_field_blacklist_product:
+    group: IMPORTFIELDSANDATTS
+    type: arr
+    value:
+      - OXAMITEMID
+      - OXAMTASKID
+      - OXBUNDLEID
+      - OXEXTURL
+      - OXFOLDER
+      - OXNOSTOCKTEXT
+      - OXPIC8
+      - OXPIC9
+      - OXPIC10
+      - OXPIC11
+      - OXPIC12
+      - OXQUESTIONEMAIL
+      - OXREMINDACTIVE
+      - OXREMINDAMOUNT
+      - OXSHOWCUSTOMAGREEMENT
+      - OXSKIPDISCOUNTS
+      - OXSTOCKTEXT
+      - OXSUBCLASS
+      - OXTEMPLATE
+      - OXUPDATEPRICE
+      - OXUPDATEPRICEA
+      - OXUPDATEPRICEB
+      - OXUPDATEPRICEC
+      - OXUPDATEPRICETIME
+      - OXURLDESC
+      - OXURLIMG
+      - OXPIXIEXPORT
+      - OXPIXIEXPORTED
+      - OXORDERINFO
+      - OXVPE
+  makaira_field_blacklist_category:
+    group: IMPORTFIELDSANDATTS
+    type: arr
+    value:
+      - OXVAT
+      - OXSKIPDISCOUNTS
+  makaira_field_blacklist_manufacturer:
+    group: IMPORTFIELDSANDATTS
+    type: arr
+    value: {  }
+  makaira_attribute_as_int:
+    group: IMPORTFIELDSANDATTS
+    type: arr
+    value: {  }
+  makaira_attribute_as_float:
+    group: IMPORTFIELDSANDATTS
+    type: arr
+    value: {  }
+  makaira_tracking_page_id:
+    group: TRACKING_PRIVACY
+    type: str
+    value: ''

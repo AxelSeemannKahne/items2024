@@ -1,0 +1,50 @@
+id: oegdproptin
+moduleSource: vendor/oxid-esales/gdpr-optin-module
+version: 4.0.0
+activated: true
+title:
+  de: 'GDPR Opt-in'
+  en: 'GDPR Opt-in'
+description:
+  de: 'Das Modul stellt Opt-in-Funktionalit&auml;t f&uuml;r die Datenschutz-Grundverordnung (DSGVO) bereit'
+  en: 'This module provides the opt-in functionality for the European General Data Protection Regulation (GDPR)'
+lang: ''
+thumbnail: logo.png
+author: 'OXID eSales AG'
+url: 'https://www.oxid-esales.com/'
+email: ''
+classExtensions:
+  OxidEsales\Eshop\Core\ViewConfig: OxidEsales\GdprOptinModule\Core\ViewConfig
+  OxidEsales\Eshop\Application\Component\Widget\ArticleDetails: OxidEsales\GdprOptinModule\Component\Widget\ArticleDetails
+  OxidEsales\Eshop\Application\Component\Widget\Review: OxidEsales\GdprOptinModule\Component\Widget\Review
+  OxidEsales\Eshop\Application\Component\UserComponent: OxidEsales\GdprOptinModule\Component\UserComponent
+  OxidEsales\Eshop\Application\Controller\ReviewController: OxidEsales\GdprOptinModule\Controller\ReviewController
+  OxidEsales\Eshop\Application\Controller\ArticleDetailsController: OxidEsales\GdprOptinModule\Controller\ArticleDetailsController
+  OxidEsales\Eshop\Application\Controller\ContactController: OxidEsales\GdprOptinModule\Controller\ContactController
+events:
+  onActivate: 'OxidEsales\GdprOptinModule\Core\GdprOptinModule::onActivate'
+  onDeactivate: 'OxidEsales\GdprOptinModule\Core\GdprOptinModule::onDeactivate'
+moduleSettings:
+  blOeGdprOptinInvoiceAddress:
+    group: oegdproptin_settings
+    type: bool
+    value: false
+  blOeGdprOptinDeliveryAddress:
+    group: oegdproptin_settings
+    type: bool
+    value: false
+  blOeGdprOptinUserRegistration:
+    group: oegdproptin_settings
+    type: bool
+    value: false
+  blOeGdprOptinProductReviews:
+    group: oegdproptin_settings
+    type: bool
+    value: false
+  OeGdprOptinContactFormMethod:
+    group: oegdproptin_contact_form
+    type: select
+    value: deletion
+    constraints:
+      - deletion
+      - statistical

@@ -1,0 +1,19 @@
+id: ddoewysiwyg
+moduleSource: vendor/ddoe/wysiwyg-editor-module
+version: 4.0.0
+activated: true
+title:
+  en: 'Summernote WYSIWYG Editor for OXID eShop'
+description:
+  de: ''
+  en: ''
+lang: ''
+thumbnail: logo.png
+author: 'OXID eSales AG & digidesk - media solutions'
+url: 'https://www.oxid-esales.com'
+email: info@oxid-esales.com
+classExtensions:
+  OxidEsales\Eshop\Application\Controller\TextEditorHandler: OxidEsales\WysiwygModule\Application\Controller\TextEditorHandler
+events:
+  onActivate: '\OxidEsales\WysiwygModule\Core\Events::onActivate'
+  onDeactivate: '\OxidEsales\WysiwygModule\Core\Events::onDeactivate'

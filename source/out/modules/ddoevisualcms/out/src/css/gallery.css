@@ -1,0 +1,19 @@
+@media (max-width: 575.98px) {
+    .dd-shortcode-gallery .card img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.dd-shortcode-gallery img {
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.dd-shortcode-gallery .dd-image-box{
+    padding: 5px 0;
+}

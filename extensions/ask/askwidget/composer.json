@@ -1,0 +1,16 @@
+{
+  "name":        "ask/askwidget",
+  "description": "Produktliste",
+  "version": "1.1.0",
+  "type":        "oxideshop-module",
+  "extra":       {
+    "oxideshop": {
+      "target-directory": "ask/askwidget"
+    }
+  },
+  "autoload":    {
+    "psr-4": {
+      "ask\\askwidget\\": "../../../source/modules/ask/askwidget"
+    }
+  }
+}

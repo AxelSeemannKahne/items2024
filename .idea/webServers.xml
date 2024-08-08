@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="cdd206f6-4515-4752-94f2-42f20ab2ba81" name="items-africa.com">
+        <fileTransfer rootFolder="/home/itenqoda/www.items-africa.com_oxid_7_1/ia" accessType="SFTP" host="items-africa.com" port="22" sshConfigId="9c02e979-d0dc-4443-9622-1a4c725c8f5c" sshConfig="itenqoda@items-africa.com:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

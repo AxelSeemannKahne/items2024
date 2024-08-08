@@ -1,0 +1,54 @@
+OxidEsales\Eshop\Core\ViewConfig:
+  - OxidEsales\MediaLibrary\Transition\Core\ViewConfig
+  - EyeAble\EyeAbleAssist\Shop\ViewConfig
+  - OxidEsales\GdprOptinModule\Core\ViewConfig
+  - OxidProfessionalServices\Usercentrics\Core\ViewConfig
+  - OxidEsales\VisualCmsModule\Core\ViewConfig
+OxidEsales\Eshop\Core\Language:
+  - OxidEsales\MediaLibrary\Language\Core\LanguageExtension
+OxidEsales\Eshop\Application\Controller\TextEditorHandler:
+  - OxidEsales\WysiwygModule\Application\Controller\TextEditorHandler
+OxidEsales\Eshop\Core\Output:
+  - Makaira\OxidConnectEssential\Oxid\Core\MakairaConnectOutput
+OxidEsales\Eshop\Application\Controller\Admin\ArticleAttributeAjax:
+  - Makaira\OxidConnectEssential\Controller\Admin\ArticleAttributeAjax
+OxidEsales\Eshop\Application\Controller\Admin\ArticleCrosssellingAjax:
+  - Makaira\OxidConnectEssential\Controller\Admin\ArticleCrossSellingAjax
+OxidEsales\Eshop\Application\Controller\Admin\ArticleExtendAjax:
+  - Makaira\OxidConnectEssential\Controller\Admin\ArticleExtendAjax
+OxidEsales\Eshop\Application\Controller\Admin\ArticleSelectionAjax:
+  - Makaira\OxidConnectEssential\Controller\Admin\ArticleSelectionAjax
+OxidEsales\Eshop\Application\Controller\Admin\AttributeMainAjax:
+  - Makaira\OxidConnectEssential\Controller\Admin\AttributeMainAjax
+OxidEsales\Eshop\Application\Controller\Admin\CategoryOrderAjax:
+  - Makaira\OxidConnectEssential\Controller\Admin\CategoryOrderAjax
+OxidEsales\Eshop\Application\Controller\Admin\ManufacturerMainAjax:
+  - Makaira\OxidConnectEssential\Controller\Admin\ManufacturerMainAjax
+OxidEsales\Eshop\Application\Controller\Admin\SelectListMainAjax:
+  - Makaira\OxidConnectEssential\Controller\Admin\SelectListMainAjax
+OxidEsales\Eshop\Application\Component\Widget\ArticleDetails:
+  - OxidEsales\GdprOptinModule\Component\Widget\ArticleDetails
+OxidEsales\Eshop\Application\Component\Widget\Review:
+  - OxidEsales\GdprOptinModule\Component\Widget\Review
+OxidEsales\Eshop\Application\Component\UserComponent:
+  - OxidEsales\GdprOptinModule\Component\UserComponent
+OxidEsales\Eshop\Application\Controller\ReviewController:
+  - OxidEsales\GdprOptinModule\Controller\ReviewController
+OxidEsales\Eshop\Application\Controller\ArticleDetailsController:
+  - OxidEsales\GdprOptinModule\Controller\ArticleDetailsController
+OxidEsales\Eshop\Application\Controller\ContactController:
+  - OxidEsales\GdprOptinModule\Controller\ContactController
+OxidEsales\Eshop\Core\ViewHelper\JavaScriptRenderer:
+  - OxidProfessionalServices\Usercentrics\Core\ScriptRenderer
+OxidEsales\Eshop\Core\Theme:
+  - OxidEsales\VisualCmsModule\Core\Theme
+OxidEsales\Eshop\Application\Controller\ContentController:
+  - OxidEsales\VisualCmsModule\Controller\ContentController
+OxidEsales\Eshop\Application\Component\BasketComponent:
+  - OxidEsales\VisualCmsModule\Component\BasketComponent
+OxidEsales\Eshop\Application\Model\Content:
+  - OxidEsales\VisualCmsModule\Model\Content
+OxidEsales\Eshop\Application\Model\ContentList:
+  - OxidEsales\VisualCmsModule\Model\ContentList
+OxidEsales\Eshop\Application\Model\SeoEncoderContent:
+  - OxidEsales\VisualCmsModule\Model\SeoEncoderContent

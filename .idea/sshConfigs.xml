@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="items-africa.com" id="9c02e979-d0dc-4443-9622-1a4c725c8f5c" port="22" nameFormat="DESCRIPTIVE" username="itenqoda" useOpenSSHConfig="true" />
+    </configs>
+  </component>
+</project>

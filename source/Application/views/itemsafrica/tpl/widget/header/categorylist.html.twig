@@ -1,0 +1,38 @@
+{% block dd_widget_header_categorylist %}
+
+    {% if oxcmp_categories %}
+        {% set homeNotSelected = oViewConf.getTopActionClassName() != 'start' %}
+
+        <div class="bg-primary shadow-lg">
+            <div class="container">
+                <nav id="mainnav" class="navbar navbar-mega navbar-expand-lg p-0">
+                    {% block dd_widget_header_categorylist_navbar_mega_menu %}
+                        <div class="navbar-collapse collapse bg-primary" id="navbarSupportedContent">
+                            <div id="navigation" class="navbar-nav navbar-nav-mega">
+
+                                    {% for catkey, ocat in oxcmp_categories %}
+                                        {% if ocat.getIsVisible() %}
+                                            {% for oTopCont in ocat.getContentCats() %}
+                                                <div class="nav-item text-center">
+                                                    <a class=" nav-link text-white nav-link-1{% if oContent.oxcontents__oxloadid.value is same as(oTopCont.oxcontents__oxloadid.value) %} active{% endif %}"{% if oContent.oxcontents__oxloadid.value is same as(oTopCont.oxcontents__oxloadid.value) %} aria-current="page"{% endif %} href="{{ oTopCont.getLink()|raw }}">{{ oTopCont.oxcontents__oxtitle.value}}</a>
+                                                </div>
+                                            {% endfor %}
+
+                                            <div class="nav-item text-center">
+                                                <a class="nav-link text-white nav-link-1{% if homeNotSelected and ocat.expanded %} active{% endif %}"{% if homeNotSelected and ocat.expanded %} aria-current="page"{% endif %} href="{{ ocat.getLink()|raw }}">
+                                                    {{ ocat.oxcategories__oxtitle.value }}
+                                                </a>
+
+                                            </div>
+                                        {% endif %}
+                                    {% endfor %}
+
+                            </div>
+                        </div>
+                    {% endblock %}
+                </nav>
+            </div>
+        </div>
+
+    {% endif %}
+{% endblock %}

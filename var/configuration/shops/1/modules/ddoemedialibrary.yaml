@@ -1,0 +1,29 @@
+id: ddoemedialibrary
+moduleSource: vendor/oxid-esales/media-library-module
+version: 1.0.0
+activated: true
+title:
+  en: Mediathek
+description:
+  de: ''
+  en: ''
+lang: ''
+thumbnail: logo.png
+author: 'OXID eSales AG & digidesk - media solutions'
+url: 'http://www.oxid-esales.com'
+email: info@oxid-esales.com
+classExtensions:
+  OxidEsales\Eshop\Core\ViewConfig: OxidEsales\MediaLibrary\Transition\Core\ViewConfig
+  OxidEsales\Eshop\Core\Language: OxidEsales\MediaLibrary\Language\Core\LanguageExtension
+controllers:
+  ddoelangjs: OxidEsales\MediaLibrary\Language\Controller\MediaLangJs
+  ddoemedia_view: OxidEsales\MediaLibrary\Application\Controller\Admin\MediaController
+  ddoemedia_wrapper: OxidEsales\MediaLibrary\Application\Controller\Admin\MediaWrapperController
+events:
+  onActivate: '\OxidEsales\MediaLibrary\Transition\Core\Events::onActivate'
+  onDeactivate: '\OxidEsales\MediaLibrary\Transition\Core\Events::onDeactivate'
+moduleSettings:
+  ddoeMediaLibraryAlternativeImageDirectory:
+    group: main
+    type: str
+    value: ''
