@@ -4,37 +4,37 @@
         {% set act = oxcmp_categories.getClickCat() %}
         {% if categories %}
             {% set deepLevel = oView.getDeepLevel() %}
-            <nav class="categoryBox hidden-sm" aria-labelledby="sidebar-header">
-                <div class="sidebar-header"><strong>{{ translate({ ident: "CATEGORIES" }) }}</strong></div>
+            <nav class="d-none d-lg-block" aria-labelledby="sidebar-header">
+
                 {% block dd_widget_sidebar_categorytree_inner %}
-                    <ol class="nav flex-column">
+                    <ol class="nav nav-pills nav-vertical w-100   flex-column">
                         {% block dd_widget_sidebar_categorytree_list %}
-                            {% macro tree(categories) %}
+                            {% macro tree(categories, level=1) %}
                                 {% set deepLevel = deepLevel+1 %}
                                 {% set oContentCat = oView.getContentCategory() %}
                                 {% for _cat in categories %}
                                     {% if _cat.getIsVisible() %}
-                                        {# CMS category #}
-                                        {% if _cat.getContentCats() and deepLevel > 1 %}
-                                            {% for _oCont in _cat.getContentCats() %}
-                                                <li class="nav-item{% if oContentCat and oContentCat.getId()==_oCont.getId() %} active{% else %} end{% endif %}" >
-                                                    <a href="nav-link{{ _oCont.getLink()|raw }}" title="{{ _oCont.oxcontents__oxtitle.value }}"><i></i>{{ _oCont.oxcontents__oxtitle.value }}</a>
-                                                </li>
-                                            {% endfor %}
-                                        {% endif %}
 
                                         {# subcategories #}
                                         {% set oSubCats = _cat.getSubCats() %}
-                                        <li class="nav-item{% if not oContentCat and act and act.getId()==_cat.getId() %} active{% elseif _cat.expanded %} exp{% endif %}{% if not _cat.hasVisibleSubCats %} end{% endif %}">
-                                            <a class="nav-link" href="{{ _cat.getLink()|raw }}" title="{{ _cat.oxcategories__oxtitle.value }}">
-                                                <svg>
-                                                    <use xlink:href="#{% if _cat.expanded and oSubCats %}down{% else %}right{% endif %}"></use>
-                                                </svg>
-                                            </a>
-                                            {% if oSubCats and _cat.expanded %}
-                                                <ul class="nav flex-column">{% import _self as self %}{{ self.tree(oSubCats) }}</ul>
-                                            {% endif %}
-                                        </li>
+
+                                            <li class="nav-item{% if not oContentCat and act and act.getId()==_cat.getId() %} active{% elseif _cat.expanded %} exp{% endif %}{% if not _cat.hasVisibleSubCats %} end{% endif %}">
+                                                {% if level>1 %}
+                                                    <a class="{% if level==2 %}dropdown-toggle text-left bg-soft fw-normal rounded mb-3{% endif %} {% if _cat.expanded %} show{% endif %} nav-link text-break {% if not oContentCat and act and act.getId()==_cat.getId() %} fw-bold{% elseif _cat.expanded %} fw-bold{% endif %}" style="font-size: 14px; line-height: 22px; white-space: normal" href="{{ _cat.getLink()|raw }}" title="{{ _cat.oxcategories__oxtitle.value }}">
+                                                        {{ _cat.oxcategories__oxtitle.value }}
+
+                                                        {% if level==2 %}
+                                                            <svg width='24' height='24' viewBox='0 0 24 24' fill='%23677788' xmlns='http://www.w3.org/2000/svg'><path d='M12.72,15.78a.75.75,0,0,1-.53.22h-.38a.77.77,0,0,1-.53-.22L6.15,10.64a.5.5,0,0,1,0-.71l.71-.71a.49.49,0,0,1,.7,0L12,13.67l4.44-4.45a.5.5,0,0,1,.71,0l.7.71a.5.5,0,0,1,0,.71Z'/></svg>
+                                                        {% endif %}
+                                                    </a>
+                                                {% endif %}
+
+                                                {% if oSubCats and _cat.expanded %}
+                                                    <ul class="nav {% if level>1 %}nav-collapse {% endif %} position-relative flex-column">{% import _self as self %}{{ self.tree(oSubCats, level + 1) }}</ul>
+                                                {% endif %}
+
+                                            </li>
+
                                     {% endif %}
                                 {% endfor %}
                             {% endmacro %}{% import _self as self %}{{ self.tree(categories) }}

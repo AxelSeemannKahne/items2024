@@ -29,7 +29,7 @@
         {% include "message/error.html.twig" with { statusMessage: _statusMessage1 ~ _statusMessage2 } %}
     {% endif %}
 
-    <div id="details_container">
+    <div id="details_container" class="container">
         {% if productListNavigation %}
             {# details locator #}
             {% set actCategory = oView.getActiveCategory() %}
@@ -82,5 +82,9 @@
         {% endif %}
         {% set actCategory = oView.getActiveCategory() %}
         {% include "page/details/inc/fullproductinfo.html.twig" %}
+    </div>
+
+    <div id="detailsRelated" class="details-related">
+        {% include "page/details/inc/related_products.html.twig" %}
     </div>
 {% endif %}

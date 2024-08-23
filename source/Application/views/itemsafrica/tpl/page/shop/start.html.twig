@@ -1,46 +1,44 @@
 {% capture append = "oxidBlock_content" %}
 
+    <div class="col-12 col-xl-5 col-xxl-6 pe-md-0 d-lg-none">
+        <img class="w-100 h-auto" src="/out/itemsafrica/img/content/header2_mobile.jpg" width="1508" height="865">
+    </div>
 
-    <div class="mb-3">
-
-        <div class="col-12 col-xl-5 col-xxl-6 pe-md-0 d-lg-none">
-            <img class="w-100 h-auto" src="/out/itemsafrica/img/content/header_short.jpg" width="960" height="300">
-        </div>
-
-        <div class="col-12 col-xl-5 col-xxl-6 pe-md-0 d-lg-none">
-            <div class="p-4 startpage-header bg-white">
-                {% include_content "oxstartheadertext" %}
-            </div>
-        </div>
-
-        <div style="background-color: #28201E;">
-            <div class="row w-100 startpage-header d-none d-lg-flex align-items-center" style="min-height: 300px; background-position: left; background-size: cover; background-image: url('/out/itemsafrica/img/content/header.jpg')">
-                <div class="col-6 col-xl-5 col-xxl-6">
-                    <br>
-                </div>
-                <div class="col-6 col-xl-7 col-xxl-6 align-items-end">
-                    <div class="me-4 rounded" style="background: #FFFFFFDD;">
-                        <div class="p-4 p-xl-5">
-                            {% include_content "oxstartheadertext" %}
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="col-12 col-xl-5 col-xxl-6 pe-md-0 d-lg-none">
+        <div class="p-4 startpage-header bg-white">
+            {% include_content "oxstartheadertext" %}
         </div>
     </div>
 
+    <div>
+        <div class="w-100 startpage-header d-none d-lg-flex align-items-center" style="min-height: 540px; background-position: left; background-size: cover; background-image: url('/out/itemsafrica/img/content/header2.jpg')">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-xl-5 col-xxl-5 align-items-end">
+                        <div class="me-4 rounded" style="background: #FFFFFF88;">
+                            <div class="p-4 p-md-5">
+                                {% include_content "oxstartheadertext" %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
 
     <h1 class="visually-hidden">{{ translate({ ident:"PAGE_TITLE_START" }) }}</h1>
 
-    {% include_content 'oxstartslot1' ignore missing  %}
+    <div class="section">
+        {% if oViewConf.getViewThemeParam('showCategoryTiles') %}
+            {% include "widget/categories.html.twig" %}
+        {% endif %}
+    </div>
 
-    {% if oViewConf.getViewThemeParam('showCategoryTiles') %}
-        {% include "widget/categories.html.twig" %}
-    {% endif %}
-
-
-    <div class="bg-white py-5">
-        <div class="container-xl mt-5">
+    <div class="section bg-white">
+        <div class="container-xl mb-5">
 
             <div class="row mb-5">
                 <div class="col-12 text-center">
@@ -50,14 +48,68 @@
 
             <div class="row">
                 <div class="col-12 col-md-6">
-                    {% include_content "oxstartcontent1" %}
+                    {% include_content "oxstartcontent1" ignore missing  %}
                 </div>
                 <div class="col-12 col-md-6">
-                    {% include_content "oxstartcontent2" %}
+                    {% include_content "oxstartcontent2" ignore missing  %}
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="section">
+        <div class="container-xl mb-5">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h3>Neu eingetroffen</h3>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    {% include_content "neu_eingetroffen" %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section bg-white">
+        <div class="container-xl">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h3>Geschenke für jeden Anlass</h3>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-12 col-md-4 mb-5 mb-md-0">
+                    {% include_content "oxstartpresent1" ignore missing  %}
+                </div>
+                <div class="col-12 col-md-4 mb-5 mb-md-0">
+                    {% include_content "oxstartpresent2" ignore missing  %}
+                </div>
+                <div class="col-12 col-md-4">
+                    {% include_content "oxstartpresent3" ignore missing  %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container-xl">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h3>Besuchen Sie uns</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    {% include_content "oxstartstore" ignore missing %}
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
     {% include_content 'oxstartslot2' ignore missing  %}

@@ -6,14 +6,15 @@
     {% set categoriesTilesRowPadding = oViewConf.getViewThemeParam('showCategoryTilesRowPadding') %}
 
     {# TODO: We should turn this into vCMS content #}
-    <div class="container-xl row-spacer">
-        <div class="categories">
+    <div class="container-xl">
+
+
 
             <span class="visually-hidden">{{ translate({ ident: "CATEGORIES" }) }}</span>
             {% set categories = oxcmp_categories %}
             <div class="row">
 
-                <div class="col-12 text-center mt-5 mb-3">
+                <div class="col-12 text-center mb-5">
                     <h3>Unsere Kategorien</h3>
                 </div>
 
@@ -24,10 +25,10 @@
                             <div class="col-6 col-md-4 col-lg-3 mb-5">
 
                                 <a class="text-decoration-none" href="{{ _subcat.getLink()|raw }}">
-                                    <div class="card h-100 mx-3 rounded shadow">
+                                    <div class="card h-100 mx-2 rounded shadow">
                                         <img class="zoom-in card-img-top rounded-top w-100 h-auto" src="{{ _subcat.getIconUrl()|raw }}" alt="{{ translate({ ident: "CATEGORY_IMAGE_ALT", args: _subcat.oxcategories__oxtitle.value }) }}">
 
-                                        <div class="card-footer rounded-bottom p-4 text-center text-uppercase fw-bold">
+                                        <div class="h6 card-footer rounded-bottom p-4 text-center text-uppercase">
                                              {{ _subcat.oxcategories__oxtitle.value }}
                                         </div>
                                     </div>
@@ -38,7 +39,7 @@
 
                 {% endfor %}
             </div>
-        </div>
+
     </div>
 
 

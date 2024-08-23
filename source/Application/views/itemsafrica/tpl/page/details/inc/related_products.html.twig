@@ -1,14 +1,18 @@
-<div class="container-xxl row-spacer">
+<div class="">
         {% block details_relatedproducts_also_bought %}
-                {% if oView.getAlsoBoughtTheseProducts() %}
+            {% if oView.getAlsoBoughtTheseProducts() %}
+                <div class="bg-white p-3">
+                    <div class="container section">
                         {% include "widget/product/list.html.twig" with {type: "grid", listId: "alsoBought", head: "CUSTOMERS_ALSO_BOUGHT"|translate, subhead: "PAGE_DETAILS_CUSTOMERS_ALSO_BOUGHT_SUBHEADER"|translate, products: oView.getAlsoBoughtTheseProducts()} %}
-                {% endif %}
+                    </div>
+                </div>
+           {% endif %}
         {% endblock %}
 
         {% block details_relatedproducts_similarproducts %}
-                {% if oView.getSimilarProducts() %}
-                        {% include "widget/product/list.html.twig" with {type: "grid", listId: "similar", products: oView.getSimilarProducts(), head: "SIMILAR_PRODUCTS"|translate, subhead: "WIDGET_PRODUCT_RELATED_PRODUCTS_SIMILAR_SUBHEADER"|translate} %}
-                {% endif %}
+            {% if oView.getSimilarProducts() %}
+                    {% include "widget/product/list.html.twig" with {type: "grid", listId: "similar", products: oView.getSimilarProducts(), head: "SIMILAR_PRODUCTS"|translate, subhead: "WIDGET_PRODUCT_RELATED_PRODUCTS_SIMILAR_SUBHEADER"|translate} %}
+            {% endif %}
         {% endblock %}
 
         {% if oView.getAccessoires() or oView.getCrossSelling() %}

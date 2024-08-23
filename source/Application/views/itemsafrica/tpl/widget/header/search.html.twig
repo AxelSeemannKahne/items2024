@@ -6,16 +6,16 @@
 
             {% block dd_widget_header_search_form_inner %}
                 <div class="input-group">
-                    {% block header_search_field %}
+                    {# % block header_search_field %}
                         <label class="visually-hidden" for="searchParam">{{ translate({ ident: "SEARCH" }) }}</label>
                         <input class="form-control" type="text" id="searchParam" name="searchparam" value="{{ oView.getSearchParamForHtml() }}" placeholder="{{ translate({ ident: "SEARCH" }) }}">
-                    {% endblock %}
+                    {% endblock %#}
 
-                    {% block dd_header_search_button %}
+                    {# % block dd_header_search_button %}
                         <button class="btn" type="submit" title="{{ translate({ ident: "SEARCH_SUBMIT" }) }}">
                             {% include "icons/search.svg" %}
                         </button>
-                    {% endblock %}
+                    {% endblock %#}
                 </div>
             {% endblock %}
         </form>

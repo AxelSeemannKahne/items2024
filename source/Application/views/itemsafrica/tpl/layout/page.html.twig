@@ -19,36 +19,47 @@
         <main class="content">
             {% block content_main %}
                 {% include "message/errors.html.twig" %}
+
                 {% if oView.getClassKey() == "details" or oView.getClassKey() == "content" and not blHideBreadcrumb %}
                     {% block layout_breadcrumb %}
-                        {% include "widget/breadcrumb.html.twig" %}
+                        <div class="bg-white">
+                            <div class="container">
+                                {% include "widget/breadcrumb.html.twig" %}
+                            </div>
+                        </div>
                     {% endblock %}
                 {% endif %}
 
-                {% if oView.getClassKey() == "content" %}
-                <div class="container">
-                    <div class="bg-white p-4 my-5">
-
-                {% endif %}
-
-
-
-
-                        {% for key, oEr in Errors.loginBoxErrors %}
-                            <div class="alert alert-danger">
-                                <p id="errorBadLogin">{{ oEr.getOxMessage() }}</p>
-                            </div>
-                            {% set bIsError = 1 %}
-                        {% endfor %}
-
-                        {% for _block in oxidBlock_content %}
-                            {{ _block|raw }}
-                        {% endfor %}
-
-                {% if oView.getClassKey() == "content" %}
+                {% for key, oEr in Errors.loginBoxErrors %}
+                    <div class="alert alert-danger">
+                        <p id="errorBadLogin">{{ oEr.getOxMessage() }}</p>
                     </div>
-                </div>
+                    {% set bIsError = 1 %}
+                {% endfor %}
+
+
+                {% if oView.getClassKey() == "content" %}
+
+
+                    <div class="container section">
+
+                        <div class="mx-3 mx-lg-0 p-4 p-sm-5 bg-white">
+                            {% for _block in oxidBlock_content %}
+                                {{ _block|raw }}
+                            {% endfor %}
+                        </div>
+
+                    </div>
+
+
+                {% else %}
+
+                    {% for _block in oxidBlock_content %}
+                        {{ _block|raw }}
+                    {% endfor %}
+
                 {% endif %}
+
 
             {% endblock %}
         </main>

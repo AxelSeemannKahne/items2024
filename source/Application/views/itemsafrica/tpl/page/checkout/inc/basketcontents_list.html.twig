@@ -1,6 +1,6 @@
 {% if editable %}
 {% set basketNoticeListButtonFunction = oViewConf.getViewThemeParam('sBasketNoticeListButtonFunction') %}
-<div id="basket_list" class="basket card{% if oViewConf.getActiveClassName() == 'order' %} orderBasketItems{% endif %}">
+<div id="basket_list" class="basket card p-4 {% if oViewConf.getActiveClassName() == 'order' %} orderBasketItems{% endif %}">
     <h2 class="h4 card-header card-title">{{ translate({ ident: "CART" }) }}</h2>
     <div class="list-group list-group-flush">
         {% endif %}
@@ -238,7 +238,7 @@
 
                                                                 {% if not basketitem.isBundle() or not basketitem.isDiscountArticle() %}
                                                                     <div class="input-group justify-content-end js-amount">
-                                                                        <button class="btn btn-outline-primary btn-less js-decreaseAmount" type="button"
+                                                                        <button class="btn btn-less js-decreaseAmount" type="button"
                                                                                 name="less">
                                                                             -
                                                                         </button>
@@ -247,7 +247,7 @@
                                                                                name="aproducts[{{ basketindex }}][am]"
                                                                                value="{{ basketitem.getAmount() }}" min="0" {% if blAllowUnevenAmounts %} step="any"{% endif %}
                                                                                aria-label="{{ translate({ ident: "QUANTITY" }) }} - {{ basketitem.getTitle() }}">
-                                                                        <button class="btn btn-outline-primary btn-more js-increaseAmount"
+                                                                        <button class="btn btn-more js-increaseAmount"
                                                                                 name="more" type="button">
                                                                             +
                                                                         </button>

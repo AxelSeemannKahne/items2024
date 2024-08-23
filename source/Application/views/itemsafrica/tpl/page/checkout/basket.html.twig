@@ -1,6 +1,6 @@
 {% capture append = "oxidBlock_content" %}
     <h1 class="visually-hidden">{{ translate({ ident:"PAGE_TITLE_BASKET" }) }}</h1>
-    <div class="container-xxl py-5">
+    <div class="container py-5">
         {% block checkout_basket_main %}
             {% set currency = oView.getActCurrency() %}
 
@@ -27,10 +27,10 @@
                 {% endblock %}
 
                 <div class="row">
-                    <div class="col-lg-8 col-xl-9">
+                    <div class="col-lg-8 col-xl-8">
                         {% include "page/checkout/inc/basketcontents.html.twig" with {editable: true} %}
                     </div>
-                    <div class="col-lg-4 col-xl-3">
+                    <div class="col-lg-4 col-xl-4">
                         <div class="sticky-md-top">
                             {% include "page/checkout/inc/summary_sidebar.html.twig" with {btn: true, editable: true} %}
                         </div>

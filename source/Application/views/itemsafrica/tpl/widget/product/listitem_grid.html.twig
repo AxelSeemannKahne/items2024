@@ -13,7 +13,7 @@
         {% set _productLink = product.getLink() %}
     {% endif %}
     {% set aVariantSelections = product.getVariantSelections("null", "null", 1) %}
-    {% set blShowToBasket = true %} {# tobasket or more info ? #}
+    {% set blShowToBasket = false %} {# tobasket or more info ? #}
     {% if blDisableToCart or product.isNotBuyable() or (aVariantSelections and aVariantSelections.selections) or product.hasMdVariants() or (oViewConf.showSelectListsInList() and product.getSelections(1)) or product.getVariants() %}
         {% set blShowToBasket = false %}
     {% endif %}
@@ -22,17 +22,17 @@
         {% set testid = oView.getViewParameter('testid') %}
     {% endif %}
 
-    <div class="card product-card">
+    <div class="card product-card rounded">
         {% block widget_product_listitem_grid_gridpicture %}
         <div class="product-img-wrapper">
 
-            <img {% if slider %}loading="lazy" {% endif %}width="350" height="220" src="{{ product.getThumbnailUrl()|raw }}" alt="{{ translate({ ident: "PRODUCT_SINGLE_IMAGE_ALT", args: product.oxarticles__oxtitle.value ~ ' ' ~ product.oxarticles__oxvarselect.value }) }}" class="product-img">
-            {% if product.getMasterZoomPictureUrl(2) %}
+            <img {% if slider %}loading="lazy" {% endif %}width="350" height="220" src="{{ product.getThumbnailUrl()|raw }}" alt="{{ translate({ ident: "PRODUCT_SINGLE_IMAGE_ALT", args: product.oxarticles__oxtitle.value ~ ' ' ~ product.oxarticles__oxvarselect.value }) }}" class="product-img rounded-top">
+         {#   {% if product.getMasterZoomPictureUrl(2) %}
                 <picture>
                     <source type="image/webp" srcset="{{ product.getMasterZoomPictureUrl(2)|raw }}" media="(min-width: 1024px)">
                     <img class="product-img img-2" width="350" height="220" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="{{ translate({ ident: "PRODUCT_SINGLE_IMAGE_ALT", args: product.oxarticles__oxtitle.value ~ ' ' ~ product.oxarticles__oxvarselect.value }) }}">
                 </picture>
-            {% endif %}
+            {% endif %}#}
             <a href="{{ _productLink|raw }}" class="stretched-link" aria-label="{{ translate({ ident: "DETAILS" }) }} - {{ product.oxarticles__oxtitle.value }}"></a>
 
 
@@ -89,22 +89,22 @@
 
                                 </form>
                             {% endhasrights %}
-                        {% else %}
+                       {# {% else %}
                             <a class="btn btn-outline-primary w-100" href="{{ _productLink|raw }}">{{ translate({ ident: "DETAILS" }) }} - {{ product.oxarticles__oxtitle.value }}</a>
-                        {% endif %}
+#}                        {% endif %}
                     </div>
                     <div class="right">
                         {% block widget_product_listitem_grid_addtowishlist %}
                             {% if oxcmp_user %}
-                                <a aria-label="{{ translate({ ident: "ADD_TO_WISH_LIST" }) }} - {{ product.oxarticles__oxtitle.value }}" class="btn btn-sm btn-light w-100" href="{{ seo_url({ ident: oViewConf.getSelfLink() ~ "cl=" ~ oViewConf.getTopActiveClassName(), params: "aid=" ~ product.oxarticles__oxnid.value ~ "&amp;anid=" ~ product.oxarticles__oxnid.value ~ "&amp;fnc=tonoticelist&amp;am=1" ~ oViewConf.getNavUrlParams() ~ "&amp;stoken=" ~ oViewConf.getSessionChallengeToken() }) }}">
+                                <a aria-label="{{ translate({ ident: "ADD_TO_WISH_LIST" }) }} - {{ product.oxarticles__oxtitle.value }}" class="btn text-primary w-100 p-1" href="{{ seo_url({ ident: oViewConf.getSelfLink() ~ "cl=" ~ oViewConf.getTopActiveClassName(), params: "aid=" ~ product.oxarticles__oxnid.value ~ "&amp;anid=" ~ product.oxarticles__oxnid.value ~ "&amp;fnc=tonoticelist&amp;am=1" ~ oViewConf.getNavUrlParams() ~ "&amp;stoken=" ~ oViewConf.getSessionChallengeToken() }) }}">
                                     <svg>
-                                        <use xlink:href="#star"></use>
+                                        <use xlink:href="#heart-fill"></use>
                                     </svg>
                                 </a>
                             {% else %}
-                                <a aria-label="{{ translate({ ident: "ADD_TO_WISH_LIST" }) }} - {{ product.oxarticles__oxtitle.value }}" class="btn btn-sm btn-light w-100" href="{{ seo_url({ ident: oViewConf.getSelfLink() ~ "cl=account", params: "anid=" ~ product.oxarticles__oxnid.value ~ "&amp;sourcecl=" ~ oViewConf.getTopActiveClassName() ~ oViewConf.getNavUrlParams() }) }}">
+                                <a aria-label="{{ translate({ ident: "ADD_TO_WISH_LIST" }) }} - {{ product.oxarticles__oxtitle.value }}" class="btn text-primary w-100 p-1" href="{{ seo_url({ ident: oViewConf.getSelfLink() ~ "cl=account", params: "anid=" ~ product.oxarticles__oxnid.value ~ "&amp;sourcecl=" ~ oViewConf.getTopActiveClassName() ~ oViewConf.getNavUrlParams() }) }}">
                                     <svg>
-                                        <use xlink:href="#star"></use>
+                                        <use xlink:href="#heart-fill"></use>
                                     </svg>
                                 </a>
                             {% endif %}
@@ -118,22 +118,40 @@
         <div class="card-body{% if tprice and tprice.getBruttoPrice() > price.getBruttoPrice() %} sale{% endif %}">
             <div class="d-flex justify-content-between">
                 {% block widget_product_listitem_infogrid_titlebox %}
-                    <div class="h5 card-title">
+                    <div class="card-title">
                         {{ product.oxarticles__oxtitle.value }} {{ product.oxarticles__oxvarselect.value }}
                     </div>
                 {% endblock %}
-                <div class="d-flex flex-column price{% if tprice and tprice.getBruttoPrice() > price.getBruttoPrice() %} sale{% endif %}">
-                    {% block widget_product_listitem_grid_price %}
-                        {% hasrights { ident: "SHOWARTICLEPRICE" } %}
-                            {% if tprice and tprice.getBruttoPrice() > price.getBruttoPrice() %}
-                                <span class="oldPrice text-muted">
+
+            </div>
+            {% if oUnitPrice or (product.oxarticles__oxweight.value and config.getConfigParam('blShowWeightInList'))%}
+                <div class="qty_weight">
+                    {% if oUnitPrice %}
+                        {{ product.oxarticles__oxunitquantity.value }} {{ product.getUnitName() }} <br>
+                    {% elseif product.oxarticles__oxweight.value and config.getConfigParam('blShowWeightInList')  %}
+                        <span id="productPricePerUnit_Weight_{{ testid }}" class="pricePerUnit">
+                            <span title="weight">{{ translate({ ident: "WEIGHT" }) }}</span>
+                            <span class="value">{{ product.oxarticles__oxweight.value }} {{ translate({ ident: "KG" }) }}</span>
+                        </span>
+                    {% endif %}
+                </div>
+            {% endif %}
+            <div class="short-desc">
+                {{ product.oxarticles__oxshortdesc.value }}
+            </div>
+            <a href="{{ _productLink|raw }}" class="stretched-link" aria-label="{{ translate({ ident: "DETAILS" }) }} - {{ product.oxarticles__oxtitle.value }}"></a>
+            <div class="d-flex flex-column price text-end {% if tprice and tprice.getBruttoPrice() > price.getBruttoPrice() %} sale{% endif %}">
+                {% block widget_product_listitem_grid_price %}
+                    {% hasrights { ident: "SHOWARTICLEPRICE" } %}
+                        {% if tprice and tprice.getBruttoPrice() > price.getBruttoPrice() %}
+                            <span class="oldPrice text-muted">
                                     <del>{{ product.getFTPrice() }} {{ currency.sign }}</del>
                                 </span>
-                            {% endif %}
+                        {% endif %}
 
-                            {% block widget_product_listitem_grid_price_value %}
-                                {% if product.getFPrice() %}
-                                    <span class="h5 text-nowrap{% if tprice and tprice.getBruttoPrice() > price.getBruttoPrice() %} text-danger{% endif %}">
+                        {% block widget_product_listitem_grid_price_value %}
+                            {% if product.getFPrice() %}
+                                <span class="text-nowrap{% if tprice and tprice.getBruttoPrice() > price.getBruttoPrice() %} text-danger{% endif %}">
                                     {% if product.isRangePrice() %}
                                         {{ translate({ ident: "PRICE_FROM" }) }}
                                         {% if not product.isParentNotBuyable() %}
@@ -148,36 +166,19 @@
                                             {{ product.getFVarMinPrice() }}
                                         {% endif %}
                                     {% endif %}
-                                        {{ currency.sign }}
+                                    {{ currency.sign }}
                                 </span>
-                                {% endif %}
-                            {% endblock %}
-                        {% endhasrights %}
+                            {% endif %}
+                        {% endblock %}
+                    {% endhasrights %}
 
-                        {% if oUnitPrice %}
-                            <p id="productPricePerUnit_{{ testid }}" class="pricePerUnit">
-                                {{ format_price(oUnitPrice, { currency: currency }) }}/{{ product.getUnitName() }}
-                            </p>
-                        {% endif %}
-                    {% endblock %}
-                </div>
-            </div>
-            {% if oUnitPrice or (product.oxarticles__oxweight.value and config.getConfigParam('blShowWeightInList'))%}
-                <div class="qty_weight">
                     {% if oUnitPrice %}
-                        {{ product.oxarticles__oxunitquantity.value }} {{ product.getUnitName() }} <br>
-                    {% elseif product.oxarticles__oxweight.value and config.getConfigParam('blShowWeightInList')  %}
-                        <span id="productPricePerUnit_Weight_{{ testid }}" class="pricePerUnit">
-                                <span title="weight">{{ translate({ ident: "WEIGHT" }) }}</span>
-                                <span class="value">{{ product.oxarticles__oxweight.value }} {{ translate({ ident: "KG" }) }}</span>
-                            </span>
+                        <p id="productPricePerUnit_{{ testid }}" class="pricePerUnit">
+                            {{ format_price(oUnitPrice, { currency: currency }) }}/{{ product.getUnitName() }}
+                        </p>
                     {% endif %}
-                </div>
-            {% endif %}
-            <div class="short-desc">
-                {{ product.oxarticles__oxshortdesc.value }}
+                {% endblock %}
             </div>
-            <a href="{{ _productLink|raw }}" class="stretched-link" aria-label="{{ translate({ ident: "DETAILS" }) }} - {{ product.oxarticles__oxtitle.value }}"></a>
         </div>
     </div>
 {% endblock %}

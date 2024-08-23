@@ -9,7 +9,7 @@
             {{ translate({ ident: "CHOOSE" }) }}
         {% endif %}
     </button>
-    <ul class="dropdown-menu" role="menu">
+    <ul class="dropdown-menu p-3" role="menu">
         {% for iItemsPerPage in oViewConf.getNrOfCatArticles() %}
             <li class="filter-item{% if oViewConf.getArtPerPageCount() == iItemsPerPage %} selected{% endif %}">
                 <a href="{{ oView.getLink()|add_url_parameters("ldtype=" ~ listType ~ "&amp;_artperpage=" ~ iItemsPerPage ~ "&amp;pgNr=0&amp;" ~ _additionalParams) }}"

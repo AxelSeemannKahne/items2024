@@ -12,7 +12,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         {% block widget_minibasket_modal_header %}
-                        <div class="modal-header">
+                        <div class="modal-header p-4">
                             <div class="h4 modal-title" id="basketModalLabel">{{ oxcmp_basket.getItemsCount() }} {{ translate({ ident: "ITEMS_IN_BASKET" }) }}</div>
                             <button type="button" class="btn-close" data-bs-dismiss="modal">
                                 <span aria-hidden="true"></span>
@@ -22,7 +22,7 @@
                         {% endblock %}
                         {% if oxcmp_basket.getProductsCount() %}
                             {% block widget_minibasket_modal_content %}
-                                <div class="modal-body">
+                                <div class="modal-body p-4">
                                     {% if oxcmp_basket.getProductsCount() %}
                                         {% hasrights { ident: "TOBASKET" } %}
 

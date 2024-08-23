@@ -1,16 +1,16 @@
 {% capture append = "oxidBlock_content" %}
     {% set template_title = "" %}
     {% if not oView.getLoginOption() and not oxcmp_user %}
-        <div class="container-md py-5">
+        <div class="container py-5">
             <div class="row justify-content-center">
-                <div class="col-md-12 col-lg-10 col-xl-10 col-xxl-6">
+                <div class="col-12">
                     <div class="row">
-                        <div class="col-lg-7">
+                        <div class="col-lg-6">
                             {% block checkout_user_main %}
                                 {% include "page/checkout/inc/options.html.twig" %}
                             {% endblock %}
                         </div>
-                        <div class="col-lg-5">
+                        <div class="col-lg-6">
                             <div class="sticky-md-top">
                                 {% include "page/checkout/inc/summary_sidebar.html.twig" %}
                             </div>
@@ -21,11 +21,11 @@
         </div>
     {% else %}
         {% block checkout_user %}
-        <div class="container-md py-5">
+        <div class="container py-5">
             <div class="row justify-content-center">
-                <div class="col-md-12 col-lg-10 col-xl-10 col-xxl-6">
+                <div class="col-12">
                     <div class="row">
-                        <div class="col-lg-7">
+                        <div class="col-lg-6">
                             <div class="card mt-n2 mb-3 active">
 
                                 {% block checkout_user_noregistration %}
@@ -69,7 +69,7 @@
                                 {{ translate({ ident: "BACK" }) }}
                             </a>
                         </div>
-                        <div class="col-lg-5">
+                        <div class="col-lg-6">
                             <div class="sticky-md-top">
                                 {% include "page/checkout/inc/summary_sidebar.html.twig" %}
 

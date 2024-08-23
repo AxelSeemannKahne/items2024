@@ -1,24 +1,26 @@
-<div id="detailsMain" class="details">
+<div id="detailsMain" class="details p-4 p-sm-5 my-5 shadow-sm rounded">
     {% include "page/details/inc/productmain.html.twig" %}
 
-    {% include "page/details/inc/accordeon.html.twig" %}
+
 
     <!-- CMS -->
 
-    {% block details_productmain_reviews %}
+  {#  {% block details_productmain_reviews %}
         {% if oView.isReviewActive() %}
             {% include "widget/reviews/reviews.html.twig" %}
         {% endif %}
-    {% endblock %}
+    {% endblock %}#}
 
-    {% include_content 'oxstartslot4' ignore missing %}
+   {# {% include_content 'oxstartslot4' ignore missing %}#}
 </div>
 
-<div class="details-more row-spacer">
-    <div class="container-xxl">
-        <div class="row">
-            {% set oManufacturer = oView.getManufacturer() %}
-            {% if oManufacturer and oManufacturer.oxmanufacturers__oxshortdesc.value %}
+
+{% set oManufacturer = oView.getManufacturer() %}
+{% if oManufacturer and oManufacturer.oxmanufacturers__oxshortdesc.value %}
+
+    <div class="details-more row-spacer">
+        <div class="container-xxl">
+            <div class="row">
                 <div class="col-12 col-md-6">
                     <div class="details-more-manufacturer">
                         {% if oManufacturer and oManufacturer.getIconUrl() %}
@@ -36,17 +38,8 @@
                         </a>
                     </div>
                 </div>
-            {% endif %}
-
-            <div class="col-12 col-md-6">
-                <div class="details-more-cms">
-                    <!-- CMS Content goes here -->
-                </div>
             </div>
         </div>
     </div>
-</div>
 
-<div id="detailsRelated" class="details-related">
-    {% include "page/details/inc/related_products.html.twig" %}
-</div>
+{% endif %}
