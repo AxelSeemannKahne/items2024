@@ -1,7 +1,7 @@
 {% if editable %}
 {% set basketNoticeListButtonFunction = oViewConf.getViewThemeParam('sBasketNoticeListButtonFunction') %}
 <div id="basket_list" class="basket card p-4 {% if oViewConf.getActiveClassName() == 'order' %} orderBasketItems{% endif %}">
-    <h2 class="h4 card-header card-title">{{ translate({ ident: "CART" }) }}</h2>
+    <h2 class="h4 card-header card-title p-3">{{ translate({ ident: "CART" }) }}</h2>
     <div class="list-group list-group-flush">
         {% endif %}
         {# basket items #}

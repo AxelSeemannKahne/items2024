@@ -80,6 +80,33 @@
         <item url="file://$PROJECT_DIR$/source/out/modules/ddoevisualcms/out/src/js/jstree/jstree.min.min.js" />
         <item url="file://$PROJECT_DIR$/source/out/modules/ddoevisualcms/out/src/js/photoswipe.min.min.js" />
         <item url="file://$PROJECT_DIR$/source/out/modules/ddoevisualcms/out/src/js/scripts.min.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/oxid-esales/apex-theme/Gruntfile.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/oxid-esales/apex-theme/build/js/form/changeaddress.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/oxid-esales/apex-theme/build/js/form/private_sales.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/oxid-esales/apex-theme/build/js/main.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/oxid-esales/apex-theme/build/js/pages/checkout/basket/changeamount.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/oxid-esales/apex-theme/build/js/pages/checkout/basket/movetonoticelist.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/oxid-esales/apex-theme/build/js/pages/checkout/basket/wrapping.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/oxid-esales/apex-theme/build/js/pages/checkout/order/agb.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/oxid-esales/apex-theme/build/js/pages/checkout/payment/payment.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/oxid-esales/apex-theme/build/js/pages/myaccount/listremovebutton.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/oxid-esales/apex-theme/build/js/pages/variants.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/oxid-esales/apex-theme/build/js/widgets/cookieNote.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/oxid-esales/apex-theme/build/js/widgets/oxcountrystateselect.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/oxid-esales/media-library-module/Gruntfile.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/oxid-esales/media-library-module/assets/out/src/js/base.min.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/oxid-esales/media-library-module/assets/out/src/js/bootstrap.min.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/oxid-esales/media-library-module/assets/out/src/js/jquery-ui.min.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/oxid-esales/media-library-module/assets/out/src/js/jquery.min.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/oxid-esales/media-library-module/assets/out/src/js/overlay.min.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/oxid-esales/media-library-module/build/grunt/jshint.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/oxid-esales/media-library-module/build/grunt/less.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/oxid-esales/media-library-module/build/grunt/uglify.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/oxid-esales/media-library-module/build/grunt/watch.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/oxid-esales/media-library-module/build/js/base/helper.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/oxid-esales/media-library-module/build/js/base/medialibrary.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/oxid-esales/media-library-module/build/js/overlay.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/oxid-esales/media-library-module/build/vendor/bootstrap/js/bootstrap.min.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
@@ -161,6 +188,33 @@
       <root url="file://$PROJECT_DIR$/source/out/modules/ddoevisualcms/out/src/js/jstree/jstree.min.min.js" />
       <root url="file://$PROJECT_DIR$/source/out/modules/ddoevisualcms/out/src/js/photoswipe.min.min.js" />
       <root url="file://$PROJECT_DIR$/source/out/modules/ddoevisualcms/out/src/js/scripts.min.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/oxid-esales/apex-theme/Gruntfile.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/oxid-esales/apex-theme/build/js/form/changeaddress.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/oxid-esales/apex-theme/build/js/form/private_sales.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/oxid-esales/apex-theme/build/js/main.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/oxid-esales/apex-theme/build/js/pages/checkout/basket/changeamount.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/oxid-esales/apex-theme/build/js/pages/checkout/basket/movetonoticelist.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/oxid-esales/apex-theme/build/js/pages/checkout/basket/wrapping.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/oxid-esales/apex-theme/build/js/pages/checkout/order/agb.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/oxid-esales/apex-theme/build/js/pages/checkout/payment/payment.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/oxid-esales/apex-theme/build/js/pages/myaccount/listremovebutton.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/oxid-esales/apex-theme/build/js/pages/variants.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/oxid-esales/apex-theme/build/js/widgets/cookieNote.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/oxid-esales/apex-theme/build/js/widgets/oxcountrystateselect.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/oxid-esales/media-library-module/Gruntfile.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/oxid-esales/media-library-module/assets/out/src/js/base.min.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/oxid-esales/media-library-module/assets/out/src/js/bootstrap.min.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/oxid-esales/media-library-module/assets/out/src/js/jquery-ui.min.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/oxid-esales/media-library-module/assets/out/src/js/jquery.min.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/oxid-esales/media-library-module/assets/out/src/js/overlay.min.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/oxid-esales/media-library-module/build/grunt/jshint.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/oxid-esales/media-library-module/build/grunt/less.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/oxid-esales/media-library-module/build/grunt/uglify.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/oxid-esales/media-library-module/build/grunt/watch.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/oxid-esales/media-library-module/build/js/base/helper.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/oxid-esales/media-library-module/build/js/base/medialibrary.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/oxid-esales/media-library-module/build/js/overlay.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/oxid-esales/media-library-module/build/vendor/bootstrap/js/bootstrap.min.js" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -91,6 +91,24 @@
       <excludeFolder url="file://$MODULE_DIR$/items-africa/vendor/wikimedia/less.php" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/ddoe/visualcms-module" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/ddoe/wysiwyg-editor-module" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/oxid-esales/apex-theme" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/oxid-esales/gdpr-optin-module" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/oxid-esales/media-library-module" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/oxid-esales/oxideshop-ce" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/oxid-esales/oxideshop-composer-plugin" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/oxid-esales/oxideshop-db-views-generator" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/oxid-esales/oxideshop-demodata-ce" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/oxid-esales/oxideshop-demodata-installer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/oxid-esales/oxideshop-demodata-pe" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/oxid-esales/oxideshop-doctrine-migration-wrapper" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/oxid-esales/oxideshop-facts" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/oxid-esales/oxideshop-metapackage-ce" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/oxid-esales/oxideshop-metapackage-pe" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/oxid-esales/oxideshop-pe" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/oxid-esales/oxideshop-unified-namespace-generator" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/oxid-esales/twig-admin-theme" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/oxid-esales/twig-component" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/oxid-esales/twig-component-pe" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

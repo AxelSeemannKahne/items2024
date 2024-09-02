@@ -12542,7 +12542,16 @@ textarea.form-control-lg {
     }
 }
 
+.is-checkout .card-header {
+    padding: 10px;
+    transition: 150ms
+}
 
+@media (min-width: 768px) {
+    .is-checkout .card-header {
+        padding: 20px
+    }
+}
 
 .is-checkout .card-header.collapsed {
     margin-bottom: 0
